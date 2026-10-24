@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Find a service center — CarCurb</title><meta name="description" content="Compare approved car service centers by area, rating and price.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css"></head>
+<body data-page="find"><a class="skip" href="#main">Skip to content</a><div id="siteHeader"></div>
+<main id="main" class="wrap">
+  <h1 style="font-size:2rem">Find a service center</h1>
+  <form id="searchForm" class="row" role="search" style="margin-bottom:10px">
+    <input id="q" type="search" placeholder="Area, center or service, e.g. AC repair" maxlength="60" style="flex:1;min-width:200px" aria-label="Search service centers">
+    <button class="btn" type="submit">Search</button>
+    <button class="btn btn-ghost" type="button" id="near">Near me</button>
+  </form>
+  <label class="check"><input type="checkbox" id="pickupOnly"> Only centers with pickup &amp; drop</label>
+  <p id="status" class="muted small" aria-live="polite"></p>
+  <div id="list" class="stack"></div>
+</main>
+<div id="siteFooter"></div>
+<script src="js/common.js"></script><script src="js/find.js"></script></body></html>

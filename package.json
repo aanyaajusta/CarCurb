@@ -1,0 +1,12 @@
+{
+  "name": "carcurb",
+  "version": "1.0.0",
+  "description": "CarCurb - car service booking and management platform",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node test/api.test.js"
+  },
+  "engines": { "node": ">=18" },
+  "license": "MIT"
+}

@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sign up — CarCurb</title><meta name="description" content="Create a CarCurb account to book services, or register your service center.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css"></head>
+<body data-page="register"><a class="skip" href="#main">Skip to content</a><div id="siteHeader"></div>
+<main id="main" class="wrap" style="max-width:560px">
+  <h1 style="font-size:2rem">Create your account</h1>
+  <div class="tabs" role="tablist" aria-label="Account type">
+    <button class="tab" role="tab" id="tab-customer" data-as="customer" aria-selected="true">I'm a car owner</button>
+    <button class="tab" role="tab" id="tab-center" data-as="center" aria-selected="false">I run a service center</button>
+  </div>
+  <div id="msg"></div>
+
+  <form id="customerForm" class="card" novalidate>
+    <label class="field"><span>Full name</span><input name="name" autocomplete="name" required maxlength="60"></label>
+    <label class="field"><span>Email</span><input name="email" type="email" autocomplete="email" required></label>
+    <label class="field"><span>Mobile number</span><input name="phone" type="tel" autocomplete="tel" placeholder="10-digit number" required></label>
+    <label class="field"><span>Password</span><input name="password" type="password" autocomplete="new-password" minlength="8" required><span class="hint">At least 8 characters.</span></label>
+    <button class="btn" type="submit" style="width:100%">Create account</button>
+  </form>
+
+  <form id="centerForm" class="card" hidden novalidate>
+    <p class="small muted">After you register, set up your services and drivers. Customers can see your center once CarCurb approves it.</p>
+    <label class="field"><span>Service center name</span><input name="centerName" required maxlength="80"></label>
+    <div class="grid g2">
+      <label class="field"><span>Area</span><input name="area" placeholder="e.g. Model Town" required maxlength="60"></label>
+      <label class="field"><span>Mobile number</span><input name="phone" type="tel" placeholder="10-digit number" required></label>
+    </div>
+    <label class="field"><span>Full address</span><input name="address" required maxlength="200"></label>
+    <label class="field"><span>Your name</span><input name="ownerName" autocomplete="name" required maxlength="60"></label>
+    <label class="field"><span>Email</span><input name="email" type="email" autocomplete="email" required></label>
+    <label class="field"><span>Password</span><input name="password" type="password" autocomplete="new-password" minlength="8" required><span class="hint">At least 8 characters.</span></label>
+    <button class="btn" type="submit" style="width:100%">Register my center</button>
+  </form>
+  <p class="small muted" style="margin-top:14px">Already have an account? <a href="login.html">Log in</a></p>
+</main>
+<div id="siteFooter"></div>
+<script src="js/common.js"></script><script src="js/register.js"></script></body></html>

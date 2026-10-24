@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Setup — CarCurb Service Center</title><meta name="description" content="Profile, services, timings, pickup and your drivers.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css"></head>
+<body data-page="center-setup"><a class="skip" href="#main">Skip to content</a><div id="siteHeader"></div>
+<main id="main" class="wrap" style="max-width:760px">
+  <h1 style="font-size:2rem">Center setup</h1>
+  <div id="banner"></div>
+  <form id="profile" class="card" novalidate>
+    <h2>Profile and timings</h2>
+    <label class="field"><span>Center name</span><input name="name" required maxlength="80"></label>
+    <div class="grid g2">
+      <label class="field"><span>Area</span><input name="area" required maxlength="60"></label>
+      <label class="field"><span>Phone</span><input name="phone" type="tel" required></label></div>
+    <label class="field"><span>Full address</span><input name="address" required maxlength="200"></label>
+    <div class="grid g3">
+      <label class="field"><span>Opens</span><input name="open" type="time" required></label>
+      <label class="field"><span>Closes</span><input name="close" type="time" required></label>
+      <label class="field"><span>Cars per hour slot</span><input name="capacity" type="number" min="1" max="20" required></label></div>
+    <label class="field"><span>Your UPI ID (optional)</span><input name="upiId" placeholder="name@bank" maxlength="60"><span class="hint">Customers who choose UPI pay straight to this ID. CarCurb never touches the money.</span></label>
+    <div class="grid g3">
+      <label class="field"><span>Latitude (optional)</span><input name="lat" inputmode="decimal"></label>
+      <label class="field"><span>Longitude (optional)</span><input name="lng" inputmode="decimal"></label>
+      <div class="field"><span>&nbsp;</span><button type="button" class="btn btn-ghost" id="locate" style="width:100%">Use my location</button></div></div>
+    <p class="hint" style="margin-top:-6px">Location lets customers sort centers by distance. Do this while you are at the center.</p>
+    <h3 style="margin-top:18px">Pickup and drop</h3>
+    <label class="check"><input type="checkbox" name="pickupEnabled"> <span>Offer pickup and drop with my own drivers</span></label>
+    <label class="field"><span>Pickup and drop fee (₹, 0 for free)</span><input name="pickupFee" type="number" min="0" max="5000" step="1"></label>
+    <button class="btn" type="submit">Save profile</button>
+  </form>
+
+  <section class="card"><h2>Services and prices</h2>
+    <div id="services" class="stack"></div>
+    <form id="serviceForm" class="row" style="margin-top:14px" novalidate>
+      <input name="name" placeholder="New service, e.g. Brake pads" maxlength="60" style="flex:2;min-width:160px" aria-label="Service name" required>
+      <input name="price" type="number" min="1" step="1" placeholder="₹ price" style="flex:1;min-width:100px" aria-label="Price" required>
+      <button class="btn" type="submit">Add</button></form></section>
+
+  <section class="card"><h2>Your drivers</h2>
+    <p class="small muted">Drivers belong to your center. They log in with their phone number and the password you set, and only see jobs you assign to them.</p>
+    <div id="drivers" class="stack"></div>
+    <form id="driverForm" class="grid g3" style="margin-top:14px" novalidate>
+      <input name="name" placeholder="Driver name" maxlength="60" aria-label="Driver name" required>
+      <input name="phone" type="tel" placeholder="Phone (login)" aria-label="Driver phone" required>
+      <input name="password" type="text" placeholder="Password (8+ characters)" minlength="8" aria-label="Driver password" autocomplete="off" required>
+      <button class="btn" type="submit" style="grid-column:1/-1">Add driver</button></form></section>
+</main>
+<div id="siteFooter"></div>
+<script src="js/common.js"></script><script src="js/center-setup.js"></script></body></html>

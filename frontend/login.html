@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Log in — CarCurb</title><meta name="description" content="Log in to CarCurb as a customer, service center, driver or admin.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css"></head>
+<body data-page="login"><a class="skip" href="#main">Skip to content</a><div id="siteHeader"></div>
+<main id="main" class="wrap" style="max-width:520px">
+  <h1 style="font-size:2rem">Log in</h1>
+  <p class="muted">Customers, service centers, drivers and admins all log in here.</p>
+  <div id="msg"></div>
+  <form id="form" class="card" novalidate>
+    <label class="field"><span>Email or phone number</span><input id="identifier" autocomplete="username" required></label>
+    <label class="field"><span>Password</span><input id="password" type="password" autocomplete="current-password" required></label>
+    <button class="btn" type="submit" style="width:100%">Log in</button>
+    <p class="small muted" style="margin:14px 0 0">New here? <a href="register.html">Create a customer account</a> or <a href="register.html?as=center">register your service center</a>. Drivers get their login from their service center.</p>
+  </form>
+  <section id="demo" class="card" hidden>
+    <h3>Demo accounts</h3>
+    <p class="small muted">For trying the project. Password for all: <code>carcurb123</code></p>
+    <div class="row">
+      <button class="btn btn-ghost btn-sm" data-id="rohan@example.com">Customer</button>
+      <button class="btn btn-ghost btn-sm" data-id="autocare@example.com">Service center</button>
+      <button class="btn btn-ghost btn-sm" data-id="9811111111">Driver</button>
+      <button class="btn btn-ghost btn-sm" data-id="admin@carcurb.app">Admin</button>
+    </div>
+  </section>
+</main>
+<div id="siteFooter"></div>
+<script src="js/common.js"></script><script src="js/login.js"></script></body></html>

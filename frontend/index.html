@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CarCurb — Book a car service and track it step by step</title>
+<meta name="description" content="Find a service center, book a slot, get your car picked up and dropped back, and follow every step of the repair. Pay the service center directly.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css"></head>
+<body data-page="home"><a class="skip" href="#main">Skip to content</a><div id="siteHeader"></div>
+<main id="main" class="wrap">
+  <section class="hero">
+    <div>
+      <h1>Your car's service, tracked like a parcel.</h1>
+      <p class="lead">Pick a service center, choose a time slot, and have your car collected from your door. You see every step until it is back with you.</p>
+      <form class="search" id="searchForm" role="search">
+        <label class="sr" for="q" style="position:absolute;left:-999px">Area or center name</label>
+        <input id="q" type="search" placeholder="Area or center name, e.g. Model Town" maxlength="60">
+        <button class="btn" type="submit">Find centers</button>
+      </form>
+      <p class="muted small" style="margin-top:10px">No advance payment. You pay the service center directly, in cash or by UPI.</p>
+    </div>
+    <aside class="tracker" aria-label="Example of a booking tracker">
+      <div class="row between"><strong>Hyundai i20 · General Service</strong><span class="pill pill-work">Repair In Progress</span></div>
+      <ol class="tl" style="margin-top:14px">
+        <li class="done"><span class="dot"></span>Booking confirmed</li>
+        <li class="done"><span class="dot"></span>Picked up from your door</li>
+        <li class="done"><span class="dot"></span>Inspection completed</li>
+        <li class="now"><span class="dot"></span>Repair in progress</li>
+        <li><span class="dot"></span>Quality check</li>
+        <li><span class="dot"></span>Out for delivery</li>
+        <li><span class="dot"></span>Delivered</li>
+      </ol>
+    </aside>
+  </section>
+
+  <section aria-labelledby="how">
+    <h2 id="how">How it works</h2>
+    <div class="steps3">
+      <div class="card"><span class="num">1</span><h3>Find and book</h3><p class="muted">Compare approved centers by area, rating and price. Pick a free slot and say if you want pickup and drop.</p></div>
+      <div class="card"><span class="num">2</span><h3>Follow the work</h3><p class="muted">The center confirms, a driver collects the car, and each stage shows up on your booking with a notification.</p></div>
+      <div class="card"><span class="num">3</span><h3>Pay at the end</h3><p class="muted">Get an itemised invoice. Pay cash to the driver or the center, or send UPI straight to the center.</p></div>
+    </div>
+  </section>
+
+  <section class="band">
+    <h2>Run a garage or service center?</h2>
+    <p>List it for free, add your services and your own drivers, and manage every booking from one screen. <a href="register.html?as=center">Register your center</a>.</p>
+  </section>
+</main>
+<div id="siteFooter"></div>
+<script src="js/common.js"></script><script src="js/index.js"></script></body></html>
